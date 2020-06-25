@@ -15,6 +15,8 @@
 		63C42B7124A440660072FA5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B4624A440650072FA5C /* ContentView.swift */; };
 		63C42B7224A440660072FA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C42B4724A440660072FA5C /* Assets.xcassets */; };
 		63C42B7324A440660072FA5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C42B4724A440660072FA5C /* Assets.xcassets */; };
+		63C42B8324A441B70072FA5C /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B8224A441B70072FA5C /* Sandwich.swift */; };
+		63C42B8424A441B70072FA5C /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B8224A441B70072FA5C /* Sandwich.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		63C42B6724A440660072FA5C /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C42B6B24A440660072FA5C /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		63C42B6D24A440660072FA5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C42B8224A441B70072FA5C /* Sandwich.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 			children = (
 				63C42B4524A440650072FA5C /* SandwichsApp.swift */,
 				63C42B4624A440650072FA5C /* ContentView.swift */,
+				63C42B8224A441B70072FA5C /* Sandwich.swift */,
 				63C42B4724A440660072FA5C /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -310,6 +314,7 @@
 			files = (
 				63C42B7024A440660072FA5C /* ContentView.swift in Sources */,
 				63C42B6E24A440660072FA5C /* SandwichsApp.swift in Sources */,
+				63C42B8324A441B70072FA5C /* Sandwich.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +324,7 @@
 			files = (
 				63C42B7124A440660072FA5C /* ContentView.swift in Sources */,
 				63C42B6F24A440660072FA5C /* SandwichsApp.swift in Sources */,
+				63C42B8424A441B70072FA5C /* Sandwich.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
