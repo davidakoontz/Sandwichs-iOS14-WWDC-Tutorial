@@ -13,8 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(sandwiches) { sandwich in
-                SandwichCell(sandwich: sandwich)
+            List {
+                ForEach(sandwiches) { sandwich in
+                    SandwichCell(sandwich: sandwich)
+                }
+                
+                HStack {
+                    Spacer()
+                    Text("\(sandwiches.count) Sandwiches")
+                        .foregroundColor(.secondary)
+                    Spacer()
+                }
             }
             .navigationTitle("Sandwiches")
         }
