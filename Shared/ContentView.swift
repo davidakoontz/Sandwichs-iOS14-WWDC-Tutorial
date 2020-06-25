@@ -9,7 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("My Sandwich Menu!").padding()
+        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+            Image(systemName: "photo")
+            
+            VStack(alignment: .leading) {
+                Text("My Sandwich Menu!")
+                    
+                Text("3 ingredients")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
+        
     }
 }
 
