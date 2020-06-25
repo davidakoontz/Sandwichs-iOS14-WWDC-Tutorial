@@ -12,6 +12,8 @@ struct SandwichDetail: View {
     
     var body: some View {
         Image(sandwich.imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
