@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct SandwichsApp: App {
-    var sandwiches: [Sandwich] = []     // a new property array of sandwiches
+
+    @StateObject private var store = testStore
     
     var body: some Scene {
         
         WindowGroup {
-            ContentView(sandwiches: testData)
+            ContentView(store: store)
         }
     }
 }
