@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct SandwichDetail: View {
+    var sandwich: Sandwich
+    
     var body: some View {
-        Text("Sandwich Detail Page")
+        Image(sandwich.imageName)
     }
 }
 
 struct SandwichDetail_Previews: PreviewProvider {
     static var previews: some View {
-        SandwichDetail()
+        SandwichDetail(sandwich: testData[0] )
     }
 }
