@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    var sandwiches: [Sandwich] = []     // a new property array of sandwiches
+    
+    
     var body: some View {
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            Image(systemName: "photo")
-            
-            VStack(alignment: .leading) {
-                Text("My Sandwich Menu!")
-                    
-                Text("3 ingredients")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+        NavigationView {
+            List(sandwiches) { sandwich in
+                SandwichCell(sandwich: sandwich)
             }
+            .navigationTitle("Sandwiches")
         }
         
     }
@@ -26,6 +24,31 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(sandwiches: testData)
+    }
+}
+
+struct SandwichCell: View {
+    var sandwich: Sandwich
+    
+    var body: some View {
+        NavigationLink( destination: Text(sandwich.name)) {
+            
+            Image(sandwich.thumbnailName)
+                .resizable()        // our thumbnails are not all the same size
+                .aspectRatio(contentMode: .fit )
+                .cornerRadius(8)
+                .frame(width: 50, height: 50 )
+            
+            
+            
+            VStack(alignment: .leading) {
+                Text(sandwich.name)
+                
+                Text("\(sandwich.ingredientCount) ingredients")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
