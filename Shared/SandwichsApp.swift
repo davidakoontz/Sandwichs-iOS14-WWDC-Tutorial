@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SandwichsApp: App {
+
+    @StateObject private var store = testStore
+    
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
         }
     }
 }
