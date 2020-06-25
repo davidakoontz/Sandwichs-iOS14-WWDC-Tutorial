@@ -15,13 +15,17 @@ struct SandwichDetail: View {
         Image(sandwich.imageName)
             .resizable()
             .aspectRatio(contentMode: zoomed ? .fill : .fit)
-            .onTapGesture { zoomed.toggle()  }
             .edgesIgnoringSafeArea(.bottom)
+            .onTapGesture { zoomed.toggle()  }
+            .navigationTitle(sandwich.name)
     }
+    
 }
 
 struct SandwichDetail_Previews: PreviewProvider {
     static var previews: some View {
-        SandwichDetail(sandwich: testData[0] )
+        NavigationView {
+            SandwichDetail(sandwich: testData[0] )
+        }
     }
 }
