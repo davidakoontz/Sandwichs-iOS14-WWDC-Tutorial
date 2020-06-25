@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var sandwiches: [Sandwich] = []     // a new property array of sandwiches
+    var sandwiches: [Sandwich]      // passed in an array of Sandwich-es
     
     
     var body: some View {
@@ -31,14 +31,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(sandwiches: testData)
-    }
-}
+
 
 struct SandwichCell: View {
-    var sandwich: Sandwich
+    var sandwich: Sandwich      // passed in just ONE sandwich
     
     var body: some View {
         NavigationLink( destination: SandwichDetail(sandwich: sandwich)) {
@@ -59,5 +55,12 @@ struct SandwichCell: View {
                     .foregroundColor(.secondary)
             }
         }
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(sandwiches: testData)
     }
 }
